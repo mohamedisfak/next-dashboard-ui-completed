@@ -1,4 +1,4 @@
-# Lama Dev School Management Dashboard
+# Smart Campus Management System
 
 ## Getting Started
 
