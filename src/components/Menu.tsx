@@ -13,6 +13,12 @@ const menuItems = [
         visible: ["admin", "teacher", "student", "parent"],
       },
       {
+        icon: "/teacher.png",
+        label: "Lecturers",
+        href: "/list/teachers",
+        visible: ["admin"],
+      },
+      {
         icon: "/student.png",
         label: "Students",
         href: "/list/students",
@@ -25,20 +31,8 @@ const menuItems = [
         visible: ["admin", "teacher"],
       },
       {
-        icon: "/assignment.png",
-        label: "Assignments",
-        href: "/list/assignments",
-        visible: ["admin", "teacher", "student", "parent"],
-      },
-      {
-        icon: "/result.png",
-        label: "Results",
-        href: "/list/results",
-        visible: ["admin", "teacher", "student", "parent"],
-      },
-      {
         icon: "/attendance.png",
-        label: "Attendance",
+        label: "Resources",
         href: "/list/attendance",
         visible: ["admin", "teacher", "student", "parent"],
       },
