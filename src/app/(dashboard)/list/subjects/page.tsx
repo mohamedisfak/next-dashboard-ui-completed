@@ -1,7 +1,7 @@
-import FormModal from "@/components/FormModal";
-import Pagination from "@/components/Pagination";
-import Table from "@/components/Table";
-import TableSearch from "@/components/TableSearch";
+import FormModal from "@/components/form-modal";
+import Pagination from "@/components/pagination";
+import Table from "@/components/table";
+import TableSearch from "@/components/table-search";
 import { role, subjectsData } from "@/lib/data";
 import prisma from "@/lib/prisma";
 import { ITEM_PER_PAGE } from "@/lib/settings";
@@ -71,6 +71,8 @@ const SubjectListPage = async({
             case"search":
             query.name = {contains:value, mode:"insensitive" };
             break;
+            default:
+            break;
           }
         }
       }
@@ -85,7 +87,7 @@ const SubjectListPage = async({
       take:ITEM_PER_PAGE,
       skip:(p-1)*ITEM_PER_PAGE,
     }),
-    prisma.parent.count({
+    prisma.subject.count({
       where:query,
     }),
   ]);

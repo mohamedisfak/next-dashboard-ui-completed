@@ -1,7 +1,7 @@
-import FormModal from "@/components/FormModal";
-import Pagination from "@/components/Pagination";
-import Table from "@/components/Table";
-import TableSearch from "@/components/TableSearch";
+import FormModal from "@/components/form-modal";
+import Pagination from "@/components/pagination";
+import Table from "@/components/table";
+import TableSearch from "@/components/table-search";
 import { role, teachersData } from "@/lib/data";
 import prisma from "@/lib/prisma";
 import { Class, Prisma, Subject, Teacher } from "@prisma/client";
@@ -103,7 +103,7 @@ const TeacherListPage = async({
 
   if(queryParams){
     for(const [key,value] of Object.entries(queryParams)){
-      if(value === undefined){
+      if(value !== undefined){
         switch(key){
           case "classId":
             query.lessons = {

@@ -1,8 +1,8 @@
-import Announcements from "@/components/Announcements";
-import AttendanceChart from "@/components/AttendanceChart";
-import CountChart from "@/components/CountChart";
-import EventCalendar from "@/components/EventCalendar";
-import UserCard from "@/components/UserCard";
+import Announcements from "@/components/announcements";
+import AttendanceChart from "@/components/attendanceChart";
+import CountChart from "@/components/count-chart";
+import EventCalendar from "@/components/event-calendar";
+import { UserCardLecturer, UserCardStaff, UserCardStudent } from "@/components/user-card";
 
 const AdminPage = () => {
   return (
@@ -11,10 +11,10 @@ const AdminPage = () => {
       <div className="w-full lg:w-2/3 flex flex-col gap-8">
         {/* USER CARDS */}
         <div className="flex gap-4 justify-between flex-wrap">
-          <UserCard type="student" />
-          <UserCard type="lecturer" />
+          <UserCardStudent type="student" />
+          <UserCardLecturer type="lecturer" />
           
-          <UserCard type="staff" />
+          <UserCardStaff type="staff" />
         </div>
         {/* MIDDLE CHARTS */}
         <div className="flex gap-4 flex-col lg:flex-row">
